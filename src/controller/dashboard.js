@@ -5,7 +5,7 @@ const dashboardState=async(req,res)=>{
             
    try {
        
-    let activeUserCount= await UserModel.countDocuments({status:true});
+    let activeUserCount= await UserModel.countDocuments({status:'Active'});
     let totalTaskCount= await  TaskModel.countDocuments();
 
       res.status(200).send({
